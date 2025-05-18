@@ -4,7 +4,7 @@ import streamlit as st
 import tensorflow as tf
 import dill
 
-model = tf.keras.models.load_model('model.keras')
+model = tf.keras.models.load_model('model.keras', compile=False)
 with open('preprocessor.dill', 'rb') as file:
     preprocessor = dill.load(file)
 # preprocessor = joblib.load('preprocessor.joblib')
